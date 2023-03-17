@@ -12,7 +12,7 @@ const Page = ({
 	search: string | undefined;
 	setHasMore: (state: boolean) => void;
 }) => {
-	const url = getRequestUrl(Endpoints.EVENTS, { page: index, pageSize: 1, search });
+	const url = getRequestUrl(Endpoints.EVENTS, { page: index, pageSize: 5, search });
 	const { data } = useSWR<WithMetaData<GetEventsOutput[]>, Error>(url, fetcher);
 
 	// check if we can load more pages

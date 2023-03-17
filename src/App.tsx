@@ -3,7 +3,7 @@ import './index.css';
 
 function App() {
 	return (
-		<div className="p-8 min-h-screen">
+		<div className="md:p-8 p-2 min-h-screen">
 			<Activity />
 		</div>
 	);
