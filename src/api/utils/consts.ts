@@ -6,4 +6,6 @@ export enum HTTPMethods {
 	DELETE = 'DELETE',
 }
 
-export enum Endpoints {}
+export enum Endpoints {
+	EVENTS = 'events',
+}

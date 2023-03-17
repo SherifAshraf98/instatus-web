@@ -1,21 +1,8 @@
+import { GetEventsOutput } from '../api/types';
 import NameIcon from './NameIcon';
 
 interface EventRowProps {
-	event: {
-		id: number;
-		actorId: number;
-		targetId: number;
-		type: string;
-		createdAt: string;
-		actor: { id: number; name: string; email: string; createdAt: string };
-		target: {
-			id: number;
-			name: string;
-			email: string;
-			createdAt: string;
-		};
-		eventTypes: { id: string };
-	};
+	event: GetEventsOutput;
 }
 const EventRow = ({ event }: EventRowProps) => {
 	const date = new Date(event.createdAt);
