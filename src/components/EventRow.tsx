@@ -19,31 +19,31 @@ const EventRow = ({ event }: EventRowProps) => {
 	})}`;
 
 	return (
-		<div onClick={() => setOpen(!open)} className="">
+		<div onClick={() => setOpen(!open)} {...(open ? { className: 'pb-4' } : { className: '' })}>
 			{open ? (
 				<div className="border rounded-xl md:-ml-4.5 md:-mr-3.25 shadow-details grid grid-cols-1 md:grid-cols-3 sm:grid-cols-2 bg-white opacity-100 py-7.5 sm:px-10 px-4 gap-y-9">
 					<EventDetailsColumns
-						title="Actor"
+						title="ACTOR"
 						keys={['Name', 'Email', 'ID']}
 						values={[event.actor.name, event.actor.email, event.actor.id]}
 					/>
 					<EventDetailsColumns
-						title="Action"
+						title="ACTION"
 						keys={['Name', 'Object', 'ID']}
 						values={[event.eventTypes.id, 'event_action', event.eventTypes.id]}
 					/>
-					<EventDetailsColumns title="Date" keys={['Readable']} values={[dateCell]} />
-					<EventDetailsColumns title="Metadata" keys={[]} values={[]} />
-					<EventDetailsColumns title="Target" keys={[]} values={[]} />
+					<EventDetailsColumns title="DATE" keys={['Readable']} values={[dateCell]} />
+					<EventDetailsColumns title="METADATA" />
+					<EventDetailsColumns title="TARGET" />
 				</div>
 			) : (
-				<div className="grid grid-cols-3 pl-5.75 pr-4.5 h-13.5 items-center hover:bg-row-hover text-sm gap-3">
-					<div className="flex gap-2.75 overflow-clip items-center">
+				<div className="grid grid-cols-3 px-2 sm:pl-5.75 sm:pr-4.5 h-13.5 items-center hover:bg-row-hover text-sm gap-3">
+					<div className="flex gap-2.75  items-center">
 						<NameIcon name={event.actor.email} actorId={event.actor.id} />
-						<div className="text-sm">{event.actor.email}</div>
+						<div className="text-sm overflow-clip truncate">{event.actor.email}</div>
 					</div>
-					<div className="overflow-clip">{event.type}</div>
-					<div className="overflow-clip">{dateCell}</div>
+					<div className="overflow-clip truncate">{event.type}</div>
+					<div className="overflow-clip truncate">{dateCell}</div>
 				</div>
 			)}
 		</div>

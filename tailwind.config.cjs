@@ -36,6 +36,7 @@ module.exports = {
 				'gray-dark': 'rgb(97, 97, 97)',
 				'dark-stone': 'rgb(28, 28, 28)',
 				'gray-normal': 'rgb(146, 146, 146)',
+				'filter-button': 'rgb(87, 87, 87)',
 			},
 			borderColor: {
 				table: 'rgb(240 240 240)',
