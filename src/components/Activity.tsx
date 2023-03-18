@@ -18,8 +18,8 @@ const Activity = () => {
 	// processed csv data
 	const [csvData, setCsvData] = useState<EventsCsvRow[]>([]);
 
-	// use debounce search (reflect each 500ms)
-	const debouncedSearch = useDebounce(search, 500);
+	// use debounce search (reflect each 300ms)
+	const debouncedSearch = useDebounce(search, 300);
 
 	useEffect(() => {
 		if (data) {
@@ -38,11 +38,18 @@ const Activity = () => {
 	}, [data]);
 
 	// pagination (load more)
-	const pages = [];
+	const pages: JSX.Element[] = [];
 	for (let i = 1; i <= index; i++) {
-		pages.push(<Page index={i} key={i} setHasMore={setHasMore} search={debouncedSearch} setData={setData} />);
+		pages.push(
+			<Page
+				index={i}
+				key={i}
+				setHasMore={setHasMore}
+				search={debouncedSearch}
+				setData={setData}
+			/>
+		);
 	}
-
 	// handle search input
 	const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
 		setIndex(1);
