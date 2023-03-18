@@ -95,15 +95,14 @@ const Activity = () => {
 			{/* rows */}
 			<div className="font-inter font-normal text-dark-stone">{pages}</div>
 
-			<button
+			{hasMore && <button
 				className="text-gray-dark bg-neutral-100 disabled:bg-neutral-100 h-13 font-semibold pl-4 pr-4.5 w-full border-0 rounded-b-3.25 hover:bg-gray-200"
 				onClick={() => {
 					if (hasMore) setIndex(index + 1);
 				}}
-				disabled={!hasMore}
 			>
 				LOAD MORE
-			</button>
+			</button>}
 		</div>
 	);
 };
