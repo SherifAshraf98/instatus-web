@@ -9,7 +9,7 @@ export enum EventTypes {
 
 export enum ComponentTypes {
 	UPDATE = 'update',
-	TEXT = 'update',
+	TEXT = 'text',
 }
 
 export enum CircularIconTypes {
