@@ -50,6 +50,8 @@ module.exports = {
 			backgroundColor: {
 				'row-hover': 'rgb(251, 251, 251)',
 				skeleton: 'rgb(248, 248, 248)',
+				'icon-orange': 'rgb(219, 110, 29)',
+				'icon-green': 'rgb(14, 120, 60)',
 			},
 			borderRadius: {
 				3.25: '13px',

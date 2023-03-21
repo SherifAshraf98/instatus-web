@@ -29,6 +29,6 @@ const CircularIcon = ({ type, actor, to }: CircularIconProps) => {
 export default CircularIcon;
 
 const colorMap: Record<string, string> = {
-	'In Progress': 'bg-orange-500',
-	'In Review': 'bg-green-800',
+	'In Progress': 'bg-icon-orange',
+	'In Review': 'bg-icon-green',
 };
