@@ -19,6 +19,7 @@ module.exports = {
 			},
 			width: {
 				6.25: '25px',
+				2.5: '10px',
 			},
 			minWidth: {
 				6.25: '25px',
@@ -44,6 +45,7 @@ module.exports = {
 			},
 			gap: {
 				2.75: '11px',
+				0.5: '2px',
 			},
 			backgroundColor: {
 				'row-hover': 'rgb(251, 251, 251)',
@@ -55,6 +57,12 @@ module.exports = {
 			},
 			boxShadow: {
 				details: '0px 2px 5px rgba(0, 0, 0, 0.04)',
+			},
+			borderColor: {
+				'icons-line': 'rgb(249, 249, 249)',
+			},
+			objectPosition: {
+				2.5: '10px',
 			},
 		},
 	},
